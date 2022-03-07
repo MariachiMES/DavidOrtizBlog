@@ -1,13 +1,14 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb:localhost:27017/david-tech-blog",
+  process.env.MONGODB_URI || "mongodb://localhost:27017/david-tech-blog",
   {
     useNewUrlParser: true,
-    useUnifiedToplogy: true,
+    useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
   },
-  console.log("Database Succesffully Connected")
+  console.log("Database Successfully Connected")
 );
+
 module.exports = mongoose.connection;
