@@ -6,6 +6,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    posts: [Posts]
   }
 
   type Posts {
@@ -21,8 +22,16 @@ const typeDefs = gql`
   type Query {
     users: [Users]
     user(UserId: ID!): Users
-    Posts: [Posts]
-    posts(postId: ID!): Posts
+    posts: [Posts]
+    post(postId: ID!): Posts
+  }
+
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+    removePost(_id: ID!): Posts
+
+    addPost(title: String!, description: String!): Posts
   }
 `;
 module.exports = typeDefs;
