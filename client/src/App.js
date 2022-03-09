@@ -7,9 +7,9 @@ import {
 } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
-import Landing from "./pages/Landing";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { useEffect } from "react";
+import Landing from "./pages/Landing";
 
 function App() {
   useEffect(() => {
@@ -36,9 +36,13 @@ function App() {
   });
   return (
     <ApolloProvider client={client}>
-      <div className="App">
-        <Route path="/" exact component={Landing}></Route>
-      </div>
+      <Router>
+        <Switch>
+          <div className="App">
+            <Route path="/" exact component={Landing}></Route>
+          </div>
+        </Switch>
+      </Router>
     </ApolloProvider>
   );
 }
