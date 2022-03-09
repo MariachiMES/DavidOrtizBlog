@@ -5,57 +5,89 @@
   color: white;
   margin: 0;
   display: flex;
-
-  .logo {
+  .left {
     padding-left: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
-    font-weight: lighter;
     font-size: 1.5em;
-  }
-  .logo::after {
-    margin-left: 20px;
-    content: "|";
-    color: rgb(99, 99, 124);
+    .logo {
+      font-weight: lighter;
+    }
+    .logo::after {
+      margin-left: 20px;
+      content: "|";
+      color: rgb(99, 99, 124);
+    }
   }
 
   .right {
-    .hamburger {
-      width: 32px;
-      height: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
+    display: flex;
+    flex-direction: row;
 
-      span {
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        transform-origin: left;
-        transition: all 2s ease;
+    .pages {
+      display: flex;
+      height: 100%;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          margin-left: 60px;
+          list-style-type: none;
+          transition: 1s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 70px;
+          width: 6em;
+        }
+        li:hover {
+          background-color: rgb(99, 99, 124);
+          height: 70px;
+          transition: 1s;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+      .hamburger {
+        width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: white;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
       }
     }
-  }
-  &.active {
-    background-color: rgb(65, 65, 65);
-    color: white;
-    transition: all 2s ease;
+    &.active {
+      background-color: rgb(65, 65, 65);
+      color: white;
+      transition: all 2s ease;
 
-    .hamburger {
-      span {
-        &:first-child {
-          background-color: white;
-          transform: rotate(45deg);
-        }
-        &:nth-child(2) {
-          transform: translate(32px);
-          opacity: 0;
-        }
-        &:last-child {
-          background-color: white;
-          transform: rotate(-45deg);
+      .hamburger {
+        span {
+          &:first-child {
+            background-color: white;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            transform: translate(32px);
+            opacity: 0;
+          }
+          &:last-child {
+            background-color: white;
+            transform: rotate(-45deg);
+          }
         }
       }
     }
