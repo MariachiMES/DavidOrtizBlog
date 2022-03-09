@@ -5,7 +5,9 @@ export default function Landing() {
   return (
     <div>
       <Navigation />
-      <h1>STUFF HERE</h1>
+      <herobanner className="hero">
+        {/* <img src={require("./")}></img> */}
+      </herobanner>
     </div>
   );
 }

@@ -1,18 +1,21 @@
 import React from "react";
-import { Button, Alignment, Navbar } from "@blueprintjs/core";
+import "./Navigation.scss";
 
 export default function Navigation() {
   return (
     <div>
-      <Navbar>
-        <Navbar.Group align={Alignment.LEFT}>
-          <Navbar.Heading>David Ortiz: Web Developer</Navbar.Heading>
-          <Navbar.Divider />
-          <Button className="bp3-minimal" icon="home" text="Home" />
-          <Button className="bp3-minimal" icon="document" text="Résumé" />
-        </Navbar.Group>
-      </Navbar>
-      <Button intent="success" text="button content" />
+      <div className="navigation">
+        <div className="left">
+          <h3 className="logo">David Ortiz: Web Developer</h3>
+        </div>
+        <div className="right">
+          {/* <div className="hamburger">
+            <span className="top-burger"></span>
+            <span className="middle-burger"></span>
+            <span className="bottom-burger"></span>
+          </div> */}
+        </div>
+      </div>
     </div>
   );
 }
