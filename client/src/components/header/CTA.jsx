@@ -10,6 +10,9 @@ export default function CTA() {
       <a href="#contact" className="btn btn-primary">
         Let's Talk
       </a>
+      <a href="/blog" className="btn">
+        See My Blog!
+      </a>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import "./portfolio.css";
-import UACTrackerIMG from "../../assets/uacTracker.png";
 import EnzoAppIMG from "../../assets/EnzoApp.png";
 import FitnessAppIMG from "../../assets/fitnessTracker.png";
 import LaSegundaIMG from "../../assets/LaSegunda.png";
@@ -143,7 +142,7 @@ export default function Portfolio() {
             return (
               <article key={id} className="portfolio__item">
                 <div className="portfolio__item-image">
-                  <img src={img} alt="UAC Tracker 3000 Image" />
+                  <img src={img} alt="Reunify" />
                 </div>
                 <h3>{title}</h3>
                 <div className="portfolio__item-cta">

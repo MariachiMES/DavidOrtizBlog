@@ -1,22 +1,22 @@
 import "./App.css";
-import About from "./components/about/about";
-import Header from "./components/header/header";
-import Nav from "./components/nav/nav";
-import Experience from "./components/experience/experience";
-import Contact from "./components/contact/contact";
-import Portfolio from "./components/portfolio/portfolio";
-import Videos from "./components/videos/videos";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Landing from "./pages/Landing/Landing";
+import Blog from "./pages/Blog/Blog";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Nav />
-      <About />
-      <Videos />
-      <Portfolio />
-      <Contact />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Landing />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
