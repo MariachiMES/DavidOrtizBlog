@@ -1,5 +1,9 @@
 .blog__header {
-  height: 200px;
+  height: auto;
+  transform: translateY(-5rem);
+}
+.container.header__container {
+  height: auto;
 }
 
 .home__button {
@@ -23,4 +27,16 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .blog__header {
+    transform: translateY(-3rem);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .blog__header {
+    transform: translateY(-2rem);
+  }
 }
