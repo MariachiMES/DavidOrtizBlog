@@ -1,0 +1,26 @@
+.blog__header {
+  height: 200px;
+}
+
+.home__button {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  font-size: 2.5rem;
+}
+
+.home__button a {
+  color: var(--color-white);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
