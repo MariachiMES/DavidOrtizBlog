@@ -9,8 +9,12 @@ const postSchema = new Mongoose.Schema({
     type: String,
     required: true,
   },
+  date: {
+    type: String,
+    required: true,
+  },
 });
 
-const Posts = Mongoose.model("Posts", postSchema);
+const Post = Mongoose.model("Post", postSchema);
 
-module.exports = Posts;
+module.exports = Post;
