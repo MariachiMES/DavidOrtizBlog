@@ -18,8 +18,9 @@ const data = [
     img: ReunifyLanding,
     github: "https://github.com/MariachiMES/UACTracker3000",
     deployed: "https://uac-tracker-3000.herokuapp.com/",
-    video: "",
-    description: `Reunify is a full-stack web application written using handlbars.js templating engine, mySQL database, express server, vanilla JavaScript and Material UI CSS framework. Reunify is a CRUD application for managing data for case managers engaged in ORR services.  I am solely responsible for the product management, UI/UX design, graphic design and code.  Reunify leverages a 3rd party API for address verification, an administrator view for managing team lead, team, employee and case data. `,
+    video: "#Reunify",
+    description:
+      "Reunify is a full-stack web application written using handlbars.js templating engine, mySQL database, express server, vanilla JavaScript and Material UI CSS framework. Reunify is a CRUD application for managing data for case managers engaged in ORR services.  I am solely responsible for the product management, UI/UX design, graphic design and code.  Reunify leverages a 3rd party API for address verification, an administrator view for managing team lead, team, employee and case data.",
     features: `-Restricted access managed by the program director
      -Administrative privliges for Team Leads to create new cases, assign case managers to a case,
      view the Census of all cases, view a single case mamager's workload, assign them a team lead and manage their priviliges
@@ -124,7 +125,7 @@ const data = [
     deployed: "https://mariachimes.github.io/RockPaperScissorsGame/",
     video: "",
     description:
-      "My first web application, which made use of alerts and JavaScript logic.  The game features some easter eggs, and randomized smack talk.",
+      "My first web application, which made use of alerts and JavaScript logic.  The game features some easter eggs and randomized smack talk.",
     features: "",
     tech: "",
   },
@@ -138,25 +139,34 @@ export default function Portfolio() {
         <h2> Portfolio</h2>
 
         <div className="container portfolio__container">
-          {data.map(({ id, img, title, github, deployed, description }) => {
-            return (
-              <article key={id} className="portfolio__item">
-                <div className="portfolio__item-image">
-                  <img src={img} alt="Reunify" />
-                </div>
-                <h3>{title}</h3>
-                <div className="portfolio__item-cta">
-                  <a href={github} target="_blank" className="btn">
-                    Github
-                  </a>
-                  <a href={deployed} target="_blank" className="btn">
-                    Live Demo
-                  </a>
-                </div>
-                <h5>{description}</h5>
-              </article>
-            );
-          })}
+          {data.map(
+            ({ id, img, title, video, github, deployed, description }) => {
+              return (
+                <article key={id} className="portfolio__item">
+                  <div className="portfolio__item-image">
+                    <img src={img} alt="UAC Tracker 3000 Image" />
+                  </div>
+                  <h3>{title}</h3>
+                  <div className="portfolio__item-cta">
+                    <a href={github} target="_blank" className="btn">
+                      Github
+                    </a>
+                    <a href={deployed} target="_blank" className="btn">
+                      Live Demo
+                    </a>
+                  </div>
+                  <h5>{description}</h5>
+                  {video ? (
+                    <h2>
+                      <a href={video}>VIDEO</a>
+                    </h2>
+                  ) : (
+                    ""
+                  )}
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
     </div>

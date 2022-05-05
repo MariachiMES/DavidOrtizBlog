@@ -13,6 +13,6 @@ export const educationData = [
 export const hobbiesData = [
   {
     id: 3,
-    description: `I love the arts, and have long studied various artistic crafts. I am an accomplished musician, having founded and directed the YouTube band Mariachi Entertainment System, and achieved glodbal notoriety.  I am also an artist and photographer; Studio Comal is a production compnay I founded in 2019 as an outlet for me to utilize my skills in art, photography, videography, audio engineering, and musical composition.`,
+    description: `I love the arts and have long studied various artistic crafts. I am an accomplished musician, having founded and directed the YouTube band Mariachi Entertainment System, and achieved global notoriety.  I am also an artist and photographer; Studio Comal is a production company I founded in 2019 as an outlet for me to utilize my skills in art, photography, videography, audio engineering and musical composition.`,
   },
 ];

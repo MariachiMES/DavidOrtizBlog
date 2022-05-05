@@ -7,7 +7,7 @@ const data = [
     id: 1,
     title: "Reunify",
     video: ReunifyVID,
-    description: `Reunify securely automates much of the workflow for ORR case managers includeing automatically generated realease requests, one-click address verification through Google Earth, Google Maps and Smarty Streets, Team tracking and role management for administrators`,
+    description: `Reunify securely automates much of the workflow for ORR case managers including automatically generated release requests, one-click address verification through Google Earth, Google Maps and Smarty Streets, Team tracking and role management for administrators`,
   },
 ];
 
@@ -20,7 +20,7 @@ export default function Videos() {
       <div className="container videos__container">
         {data.map(({ id, title, video, description }) => {
           return (
-            <article key={id} className="video">
+            <article id={title} key={id} className="video">
               <div className="video__head">
                 <ReactPlayer
                   url={video}
